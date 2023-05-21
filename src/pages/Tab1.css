@@ -1,0 +1,8 @@
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    
+    text-align: justify;
+    color: rgb(97, 97, 97);
+}
