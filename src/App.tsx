@@ -10,12 +10,12 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { home, options, search, text} from 'ionicons/icons';
+import { home, options, search, text, pulse, alert} from 'ionicons/icons';
 import Home from './pages/Home';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
-
+import Tab4 from './pages/Tab4';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -55,6 +55,9 @@ const App: React.FC = () => (
           <Route path="/tab3">
             <Tab3 />
           </Route>
+          <Route path="/tab4">
+            <Tab4 />
+          </Route>
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
@@ -75,6 +78,10 @@ const App: React.FC = () => (
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon aria-hidden="true" icon={text} />
             <IonLabel>Keyboard</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab4" href="/tab4">
+            <IonIcon aria-hidden="true" icon={pulse} />
+            <IonLabel>Haptics</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
