@@ -6,6 +6,7 @@ import React, { useState } from 'react';
 import { ActionSheet, ActionSheetButtonStyle } from '@capacitor/action-sheet';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
+import { Toast } from '@capacitor/toast';
 
 const Tab1: React.FC = () => {  
   const texto = 'Un Action Sheet en Ionic es un componente de interfaz de usuario que muestra una lista de acciones o opciones al usuario en forma de hoja deslizable desde la parte inferior de la pantalla. Es una forma común de presentar un conjunto de opciones o acciones contextualmente relevantes para que el usuario las seleccione.';
@@ -35,22 +36,45 @@ const Tab1: React.FC = () => {
               onDidDismiss={closeActionSheet}
               buttons={[
                 {
-                  text: 'Opción 1',
+                  text: 'Mensaje 1',
                   handler: () => {                   
                     closeActionSheet();
+                    const showToast = async () => {
+                      await Toast.show({
+                        text: 'Este es un Toast',
+                        duration: 'short',
+                        position: 'center'
+                      });
+                    };
+                    showToast();
                   }
                 },
                 {
-                  text: 'Opción 2',
+                  text: 'Mensaje 2',
                   handler: () => {                    
                     closeActionSheet();
+                    const showToast = async () => {
+                      await Toast.show({
+                        text: 'Este es un plugin',
+                        duration: 'short',
+                        position: 'center'
+                      });
+                    };
+                    showToast();
                   }
                 },
                 {
-                  text: 'Cancelar',
-                  role: 'cancel',
+                  text: 'Mensaje 3',
                   handler: () => {
                     closeActionSheet();
+                    const showToast = async () => {
+                      await Toast.show({
+                        text: 'Este muestra un texto',
+                        duration: 'short',
+                        position: 'center'
+                      });
+                    };
+                    showToast();
                   }
                 }
               ]}

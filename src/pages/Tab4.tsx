@@ -1,6 +1,6 @@
 // Importar los módulos necesarios
 
-import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFab, IonFabButton,IonIcon } from '@ionic/react';
+import { IonButton, IonContent, IonPopover, IonHeader, IonPage, IonTitle, IonToolbar, IonFab, IonFabButton,IonIcon } from '@ionic/react';
 import React, { useState } from 'react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab4.css';
@@ -17,6 +17,7 @@ const Tab4: React.FC = () => {
         await Haptics.impact({ style: ImpactStyle.Light });
         await Haptics.vibrate();
     };
+  
         
   return (
       <IonPage>
@@ -30,8 +31,14 @@ const Tab4: React.FC = () => {
             <p>{texto}</p>                                         
           </div>
           <div className="buttons">            
-            <IonFabButton color="tertiary" onClick={hapticsImpactMedium}>1</IonFabButton>                  
-            <IonFabButton color="dark" onClick={hapticsImpactLight}>2</IonFabButton>                          
+            <IonFabButton id="hover-trigger-m" color="tertiary" onClick={hapticsImpactMedium}>1</IonFabButton>                  
+            <IonPopover trigger="hover-trigger-m" triggerAction="hover">
+              <IonContent class="ion-padding">Medio</IonContent>
+            </IonPopover> 
+            <IonFabButton id="hover-trigger-l" color="dark" onClick={hapticsImpactLight}>2</IonFabButton> 
+            <IonPopover trigger="hover-trigger-l" triggerAction="hover">
+              <IonContent class="ion-padding">Ligero</IonContent>
+            </IonPopover>                       
         </div>         
         </IonContent>
       </IonPage>
