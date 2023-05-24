@@ -2,9 +2,7 @@
 
 import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonActionSheet, IonInput } from '@ionic/react';
 import React, { useState } from 'react';
-import ExploreContainer from '../components/ExploreContainer';
 import './Tab3.css';
-import { Browser } from '@capacitor/browser';
 import { Keyboard } from '@capacitor/keyboard';
 
 
@@ -17,7 +15,7 @@ const Tab3: React.FC = () => {
       <IonPage>
         <IonHeader>
           <IonToolbar>
-            <IonTitle>Componente: Keyboard</IonTitle>
+            <IonTitle>Plugin: Keyboard</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>

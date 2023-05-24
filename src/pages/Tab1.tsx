@@ -1,10 +1,7 @@
 // Importar los módulos necesarios
 
 import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonActionSheet } from '@ionic/react';
-import { camera, trash, close, home } from 'ionicons/icons';
 import React, { useState } from 'react';
-import { ActionSheet, ActionSheetButtonStyle } from '@capacitor/action-sheet';
-import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 import { Toast } from '@capacitor/toast';
 import { Geolocation } from '@capacitor/geolocation';
@@ -58,6 +55,7 @@ const Tab1: React.FC = () => {
             <IonActionSheet
               isOpen={showActionSheet}
               onDidDismiss={closeActionSheet}
+              header='Del plguin de Geolocalizacion'
               buttons={[
                 {
                   text: 'Mostrar mi latitud',

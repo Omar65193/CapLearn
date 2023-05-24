@@ -23,7 +23,7 @@ const Tab4: React.FC = () => {
       <IonPage>
         <IonHeader>
           <IonToolbar>
-            <IonTitle>Componente: Haptics</IonTitle>
+            <IonTitle>Plugin: Haptics</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>
