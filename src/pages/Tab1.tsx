@@ -55,7 +55,7 @@ const Tab1: React.FC = () => {
             <IonActionSheet
               isOpen={showActionSheet}
               onDidDismiss={closeActionSheet}
-              header='Del plguin de Geolocalizacion'
+              header='Del plugin de Geolocalizacion'
               buttons={[
                 {
                   text: 'Mostrar mi latitud',
