@@ -77,15 +77,6 @@ const Home: React.FC = () => {
                   <IonCardContent>Componente visual que muestra un conjunto de elementos organizados verticalmente.</IonCardContent>
                 </IonCard>
               </IonItem>
-              <IonItem>
-                <IonCard>
-                  <IonCardHeader>
-                    <IonCardSubtitle>UI Component</IonCardSubtitle>
-                    <IonCardTitle>Pop Over</IonCardTitle>
-                  </IonCardHeader>
-                  <IonCardContent>Proporcionando información o funcionalidad adicional sin interrumpir la experiencia principal de la interfaz.</IonCardContent>
-                </IonCard>
-              </IonItem>
             </IonList> 
         </IonContent>
       </IonPage>

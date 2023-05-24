@@ -31,14 +31,8 @@ const Tab4: React.FC = () => {
             <p>{texto}</p>                                         
           </div>
           <div className="buttons">            
-            <IonFabButton id="hover-trigger-m" color="tertiary" onClick={hapticsImpactMedium}>1</IonFabButton>                  
-            <IonPopover trigger="hover-trigger-m" triggerAction="hover">
-              <IonContent class="ion-padding">Medio</IonContent>
-            </IonPopover> 
-            <IonFabButton id="hover-trigger-l" color="dark" onClick={hapticsImpactLight}>2</IonFabButton> 
-            <IonPopover trigger="hover-trigger-l" triggerAction="hover">
-              <IonContent class="ion-padding">Ligero</IonContent>
-            </IonPopover>                       
+            <IonFabButton color="tertiary" onClick={hapticsImpactMedium}>1</IonFabButton>                  
+            <IonFabButton color="dark" onClick={hapticsImpactLight}>2</IonFabButton>                       
         </div>         
         </IonContent>
       </IonPage>
